@@ -1,4 +1,4 @@
-let isUnique = (s: string) => {
+let isUniqueNick = (s: string) => {
   // assuming it's ASCII text, Unicode will be harder
   if (s.length > 128) {
     return false
@@ -22,5 +22,5 @@ let isUnique = (s: string) => {
   return result
 }
 
-console.log(isUnique("hello"))
-console.log(isUnique("world"))
+console.log(isUniqueNick("hello"))
+console.log(isUniqueNick("world"))

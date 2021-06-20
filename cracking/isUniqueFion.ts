@@ -23,7 +23,7 @@ let isUniqueFion = (s: string): boolean => {
     return true;
 }
 
-console.log(isUnique(anExampleVariable));
+console.log(isUniqueFion(anExampleVariable));
 
 let v:number = 'a'.charCodeAt(0) - 'a'.charCodeAt(0);
 console.log(v);
