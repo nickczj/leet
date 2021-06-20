@@ -3,7 +3,7 @@ console.log(anExampleVariable)
 
 let holder2:string[] = [];
 
-let isUnique = (s: string): boolean => {
+let isUniqueFion = (s: string): boolean => {
     
     interface Holder {
         [details: string]: string;
