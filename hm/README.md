@@ -1,3 +1,6 @@
+# Test
+Start test by running `npm run test`. Tests automatically reruns when changes are saved.
+
 # Typescript Cheatsheet
 
 ## Types
