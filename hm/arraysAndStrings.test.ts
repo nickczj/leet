@@ -15,7 +15,7 @@ function charactersAreUnique(word: string): boolean {
         let bitAtIndex: number = word[i].charCodeAt(0) - 'a'.charCodeAt(0);
 
         // duplication
-        if((checker & (1 << bitAtIndex)) > 0) return false;
+        if ((checker & (1 << bitAtIndex)) > 0) return false;
 
         // continue to another character
         checker = checker | (1 << bitAtIndex);
@@ -23,7 +23,7 @@ function charactersAreUnique(word: string): boolean {
 
     // no duplication
     return true;
-  }
+}
 
 describe('charactersAreUnique', () => {
 
@@ -50,3 +50,45 @@ describe('charactersAreUnique', () => {
 // Question 2
 // Check Permutation: Given two strings,
 // write a method to decide if one is a permutation of the other.
+
+
+// Question 3: URLify
+// Write a method to replace all spaces in a string with '%20'. 
+// You may assume that the string has sufficient space at the end to hold the additional characters,
+// and that you are given the "true" length of the string. 
+// (Note: If implementing in Java,please use a character array so that you can perform this operation in place.)
+/**
+ * Given a string return the URL encoded string
+ * currently, only spaces are encoded (' ' -> %20)
+ * other character encoding is not implemented.
+ * 
+ * @param s - The input string of word
+ * @returns encoded URL string
+ */
+
+const urlify = (s: string): string => {
+    let isLeading: boolean = true
+    let out: string = ''
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] !== ' ') {
+            isLeading = false;
+        }
+
+        if (!isLeading) {
+            out += s[i];
+        }
+    }
+    return out
+}
+
+describe('URLify', () => {
+
+    let s: string;
+
+    beforeEach(() => s = '')
+
+    it('retuns a string with spaces replaced with %20', () => {
+        s = 'Mr John Smith   ';
+        expect(urlify(s)).toBe('Mr%20John%20Smith');
+    })
+})
