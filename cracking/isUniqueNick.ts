@@ -1,4 +1,4 @@
-let isUniqueNick = (s: string) => {
+export const isUniqueNick = (s: string) => {
   // assuming it's ASCII text, Unicode will be harder
   if (s.length > 128) {
     return false
