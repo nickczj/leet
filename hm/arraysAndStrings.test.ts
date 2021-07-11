@@ -92,3 +92,41 @@ describe('URLify', () => {
         expect(urlify(s)).toBe('Mr%20John%20Smith');
     })
 })
+
+// Chapter 2 - Question 1
+// Remove Dups! Write code to remove duplicates from an unsorted linked list.
+// FOLLOW UP
+// How would you solve this problem if a temporary buffer is not allowed?
+
+
+class List {
+    val: number
+    next: List | null
+    constructor(val?: number, next?: List | null) {
+      this.val = (val === undefined ? 0 : val)
+      this.next = (next === undefined ? null : next)
+    }
+}
+
+const unDup = (l: List): List => {
+    //* create new hashtable T
+    //* get the head of the list
+    //* run through each value. insert into hashtable T if doesn't exist.
+    //* prev = null;
+    /* loop (elements as element){
+            if (exist in T)
+            {
+                //* next = element.next
+                //* remove element
+                //get prev, set prev.next = next
+            }
+            else
+            {
+                add to T
+                prev = element;
+            }
+        }
+    */
+    //* return list
+}
+
